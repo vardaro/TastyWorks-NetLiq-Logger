@@ -1,6 +1,6 @@
 # TastyWorks NetLiq Logger
  
- Minutely `node.js` callback monster for logging Net Liquidating value of my TW account. 
+ Script to log net liq of my TastyWorks account in a Mongo db. I run this minutely, but it can be scheduled hourly, daily, or whatever.
 
  You can use this too, if you need a way to track NetLiq since they don't provide this info naturally. This script requires four environment variable configurations to function:
 
