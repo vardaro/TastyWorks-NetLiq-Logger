@@ -87,10 +87,10 @@ async function main() {
     let tradingHours = marketIsOpen();
     console.log(`Market is ${tradingHours ? "open" : "closed, aborting."}`);
 
-    if (!tradingHours)
-        return;
+    // if (!tradingHours)
+    //     return;
 
-    let netliq = await getAccountValueTW(USERNAME, PASSWORD, 'klj');
+    let netliq = await getAccountValueTW(USERNAME, PASSWORD, TASTY_ACCOUNT_ID);
     if (netliq == -1) {
         throw Error(`Error extracting account value from ${TASTY_ACCOUNT_ID}`);
     }
