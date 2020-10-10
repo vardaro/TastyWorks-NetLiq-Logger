@@ -1,4 +1,4 @@
-# TastyWork NetLiq Logger
+# TastyWorks NetLiq Logger
  
  Minutely `node.js` callback monster for logging Net Liquidating value of my TW account. 
 
