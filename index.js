@@ -3,6 +3,7 @@
 
 const tw = require('tasty-works-api');
 const mongo = require('mongodb').MongoClient;
+
 const credentials = {
     username: process.env.TASTY_USERNAME || require('./secret/secret').TASTY_USERNAME,
     password: process.env.TASTY_PASSWORD || require('./secret/secret').TASTY_PASSWORD
@@ -26,9 +27,7 @@ tw.authorization()
         console.log(`TW: Connecting to DB`);
         mongo.connect(DATABASE_URL, { useUnifiedTopology: true }, function (err, client) {
             console.log("TW: Connecting successfully to DB");
-
             const db = client.db('account_value');
-
             const collection = db.collection('documents');
             // Insert some documents
             collection.insertOne(
@@ -36,10 +35,8 @@ tw.authorization()
                 function (err, result) {
                     if (err)
                         throw err;
-
                     console.log(`TW: Insert successful`);
                     client.close();
                 });
         });
-
     });
